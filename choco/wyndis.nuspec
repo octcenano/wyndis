@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wyndis</id>
+    <version>2.0.0</version>
+    <title>Wyndis</title>
+    <authors>octcenano</authors>
+    <owners>octcenano</owners>
+    <licenseUrl>https://github.com/octcenano/wyndis/blob/main/LICENSE</licenseUrl>
+    <projectUrl>https://wyndis-download-ce9eb.web.app</projectUrl>
+    <iconUrl>https://wyndis-download-ce9eb.web.app/favicon.ico</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Auditor de seguridad profesional para Windows. 300+ puntos de verificación, informe PDF con gráficos, código abierto MIT.</description>
+    <summary>Wyndis analiza 27 categorías de seguridad en Windows y genera un informe PDF profesional.</summary>
+    <tags>security windows audit wyndis lynis defender firewall</tags>
+    <packageSourceUrl>https://github.com/octcenano/wyndis</packageSourceUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

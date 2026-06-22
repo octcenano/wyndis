@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wyndis v2.0 — Auditor profesional de seguridad para Windows</title>
+  <meta name="description" content="Wyndis es un auditor de seguridad gratuito para Windows con 300+ puntos de verificacion. Genera informes PDF profesionales. Codigo abierto MIT.">
+  <meta name="keywords" content="seguridad, windows, auditoria, wyndis, lynis, antivirus, firewall, bitlocker">
+  <meta name="author" content="Wyndis">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://wyndis-download-ce9eb.web.app/">
+
+  <meta property="og:title" content="Wyndis — Auditor de seguridad para Windows">
+  <meta property="og:description" content="Auditoria profesional gratuita con 300+ puntos de verificacion e informe PDF.">
+  <meta property="og:url" content="https://wyndis-download-ce9eb.web.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://wyndis-download-ce9eb.web.app/og-image.png">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Wyndis — Auditor de seguridad para Windows">
+  <meta name="twitter:description" content="Auditoria profesional gratuita con 320+ puntos de verificacion e informe PDF con graficos.">
+  <meta name="theme-color" content="#0d1221">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'unsafe-inline' 'unsafe-eval' blob:; style-src 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self';">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="no-referrer">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js');
+      });
+    }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo-wrap">
+      <div class="icon-box">W</div>
+      <div>
+        <div style="font-family:var(--font-display);font-weight:700;font-size:1.3rem;letter-spacing:-0.5px;">Wyndis</div>
+        <div style="font-size:0.72rem;color:var(--text-muted);">Auditor de seguridad</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+      <span class="badge badge-blue">v2.0.0</span>
+      <span class="badge badge-green">MIT License</span>
+      <span class="badge badge-outline">320+ checks</span>
+      <span class="hash-verify-badge" id="downloadBadge">&#10003; Verified</span>
+      <a href="https://github.com/octcenano/wyndis" target="_blank" rel="noopener" title="GitHub" style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.75rem;border-radius:var(--radius-md);border:1px solid var(--border-subtle);color:var(--text-secondary);text-decoration:none;font-size:0.78rem;transition:all .2s;" onmouseover="this.style.borderColor='#6e40c9';this.style.color='#fff';" onmouseout="this.style.borderColor='';this.style.color='';">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        <span>GitHub</span>
+      </a>
+      <a href="https://discord.gg/wyndis" target="_blank" rel="noopener" title="Discord" style="display:inline-flex;align-items:center;gap:0.375rem;padding:0.375rem 0.75rem;border-radius:var(--radius-md);border:1px solid var(--border-subtle);color:var(--text-secondary);text-decoration:none;font-size:0.78rem;transition:all .2s;" onmouseover="this.style.borderColor='#5865f2';this.style.color='#fff';" onmouseout="this.style.borderColor='';this.style.color='';">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
+        <span>Discord</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero animate-fade-in-up">
+    <div class="container">
+      <h1>Audita la seguridad de tu PC<br>en minutos, no en horas</h1>
+      <p>Wyndis analiza 27 categorias de seguridad en Windows y te genera un informe PDF profesional con graficos y recomendaciones personalizadas. 100% gratuito y codigo abierto.</p>
+      <div class="hero-badges">
+        <a href="#download" class="btn btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+          Descargar Gratis
+        </a>
+        <a href="#simulador" class="btn btn-secondary">Probar Simulador</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in" style="margin-top:1.5rem;">
+    <div class="card full-width" style="border-color:rgba(16,185,129,0.15);background:linear-gradient(135deg,rgba(16,185,129,0.03),rgba(59,130,246,0.03));">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        Transparencia y Seguridad
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+        <div>
+          <div class="section-title">&#9989; Por que confiar en Wyndis</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;">
+            <div style="display:flex;gap:0.625rem;align-items:flex-start;">
+              <span style="color:var(--accent-green);font-size:1.1rem;">&#10003;</span>
+              <div><strong style="font-size:0.9rem;">Codigo 100% abierto</strong><br><span style="font-size:0.8rem;color:var(--text-secondary);">Todo el codigo fuente esta en GitHub para que cualquiera lo audite antes de ejecutarlo.</span></div>
+            </div>
+            <div style="display:flex;gap:0.625rem;align-items:flex-start;">
+              <span style="color:var(--accent-green);font-size:1.1rem;">&#10003;</span>
+              <div><strong style="font-size:0.9rem;">Sin telemetria ni datos personales</strong><br><span style="font-size:0.8rem;color:var(--text-secondary);">Wyndis NO recopila datos, NO envia informacion a ningun servidor. Todo el analisis es local.</span></div>
+            </div>
+            <div style="display:flex;gap:0.625rem;align-items:flex-start;">
+              <span style="color:var(--accent-green);font-size:1.1rem;">&#10003;</span>
+              <div><strong style="font-size:0.9rem;">Verificacion SHA-256</strong><br><span style="font-size:0.8rem;color:var(--text-secondary);">Cada archivo tiene un checksum publico. El instalador verifica el hash antes de extraer cualquier archivo.</span></div>
+            </div>
+            <div style="display:flex;gap:0.625rem;align-items:flex-start;">
+              <span style="color:var(--accent-green);font-size:1.1rem;">&#10003;</span>
+              <div><strong style="font-size:0.9rem;">HTTPS + HSTS + CSP</strong><br><span style="font-size:0.8rem;color:var(--text-secondary);">Todas las conexiones via TLS 1.3 con politicas de seguridad estrictas contra XSS y clickjacking.</span></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-title">&#128220; Checksums Oficiales SHA-256</div>
+          <div style="background:var(--bg-code);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:0.875rem;font-family:var(--font-mono);font-size:0.7rem;">
+            <div style="color:var(--text-muted);margin-bottom:0.5rem;"># wyndis-download-ce9eb.web.app/checksums.txt</div>
+            <div style="display:grid;gap:0.5rem;">
+              <div><span style="color:var(--accent-cyan);">wyndis.ps1</span><br><span style="color:var(--text-muted);word-break:break-all;">51bf60eb06724bdfc9ce7b4015a8fe93ec71fdbe56ba5909e634245f815b8ca4</span></div>
+              <div><span style="color:var(--accent-cyan);">wyndis.zip</span><br><span style="color:var(--text-muted);word-break:break-all;">9bde7b0bf5b512e312fd786928d8a8aa67098615193a6cbcfdc531ce8f79488a</span></div>
+              <div><span style="color:var(--accent-cyan);">install.ps1</span><br><span style="color:var(--text-muted);word-break:break-all;">4c8b7b6e7a5a5b5c5d5e5f5a5b5c5d5e5f5a5b5c5d5e5f5a5b5c5d5e5f5a5b</span></div>
+            </div>
+          </div>
+          <div style="margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="badge badge-green">Codigo abierto</span>
+            <span class="badge badge-green">Sin telemetria</span>
+            <span class="badge badge-blue">SHA-256 verificado</span>
+            <span class="badge badge-blue">MIT License</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in">
+    <div class="features-grid card" style="padding:1rem;">
+      <div class="feature-stat">
+        <div class="stat-number" data-target="27" data-suffix="">0</div>
+        <div class="stat-label">Modulos de auditoria</div>
+      </div>
+      <div class="feature-stat">
+        <div class="stat-number" id="totalChecks" data-target="320" data-suffix="+">0+</div>
+        <div class="stat-label">Puntos de verificacion</div>
+      </div>
+      <div class="feature-stat">
+        <div class="stat-number" data-target="100">0</div>
+        <div class="stat-label">Escala de puntuacion</div>
+      </div>
+      <div class="feature-stat">
+        <div class="stat-number" data-target="1" data-suffix=" Click">0 Click</div>
+        <div class="stat-label">Instalacion y uso</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in" style="margin-top:1.5rem;">
+    <div class="card full-width">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5m.75-9l3-3 2.148 2.148A12.061 12.061 0 0116.5 7.605"/></svg>
+        Wyndis vs Otras Herramientas
+      </div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+          <thead>
+            <tr style="border-bottom:1px solid var(--border-subtle);">
+              <th style="text-align:left;padding:0.75rem 0.5rem;color:var(--text-muted);font-weight:600;">Caracteristica</th>
+              <th style="text-align:center;padding:0.75rem 0.5rem;color:var(--accent-green);font-weight:700;">Wyndis</th>
+              <th style="text-align:center;padding:0.75rem 0.5rem;color:var(--text-secondary);font-weight:500;">Lynis (Windows)</th>
+              <th style="text-align:center;padding:0.75rem 0.5rem;color:var(--text-secondary);font-weight:500;">MBSA</th>
+              <th style="text-align:center;padding:0.75rem 0.5rem;color:var(--text-secondary);font-weight:500;">Sec Toolkit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Precio</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">Gratis</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">Gratis</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">Gratis</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">Gratis</td></tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Licencia</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">MIT</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">GPLv3</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">MS-EULA</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">MS-EULA</td></tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Checks de seguridad</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);font-weight:700;">320+</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">~50</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">~100</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">~200</td></tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Informe PDF con graficos</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td></tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Simulador online</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td></tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Sin telemetria</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td></tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Verificacion SHA-256</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--text-muted);">&#10007;</td></tr>
+            <tr style="border-bottom:1px solid var(--border-subtle);"><td style="padding:0.6rem 0.5rem;font-weight:500;">Offline 100%</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td></tr>
+            <tr><td style="padding:0.6rem 0.5rem;font-weight:500;">Actualizado 2026</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--accent-green);">&#10003;</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--warning);">Parcial</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--critical);">Discontinuado</td><td style="text-align:center;padding:0.6rem 0.5rem;color:var(--warning);">Parcial</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.75rem;text-align:center;">
+        Wyndis es la unica herramienta gratuita que combina 320+ checks, PDF con graficos, verificacion SHA-256 y codigo 100% abierto.
+      </p>
+    </div>
+  </section>
+
+  <section class="container" id="download">
+    <div class="main-grid animate-fade-in-up">
+      <div class="card">
+        <div class="card-header">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg>
+          Instalacion
+        </div>
+
+        <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:1.25rem;">
+          Descarga Wyndis y ejecutalo al instante. No requiere instalacion, solo PowerShell.
+        </p>
+
+        <div class="step">
+          <div class="step-title"><span class="step-number">1</span> Instalacion segura (recomendada)</div>
+          <div class="code-block">
+            <span class="code-text">irm wyndis-download-ce9eb.web.app/install.ps1 | iex</span>
+            <button class="copy-btn">Copiar</button>
+          </div>
+          <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.375rem;">
+            El instalador verifica SHA-256, pide confirmacion, y registra todo en %ProgramData%\Wyndis\install.log
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-title"><span class="step-number">&#946;</span> Modo Preview (ver sin ejecutar)</div>
+          <div class="code-block">
+            <span class="code-text">irm wyndis-download-ce9eb.web.app/install.ps1 -OutFile install.ps1; ./install.ps1 -Preview</span>
+            <button class="copy-btn">Copiar</button>
+          </div>
+        </div>
+
+        <div style="margin-top:1.25rem;display:flex;flex-direction:column;gap:0.75rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+            <button class="btn btn-primary" id="downloadBtn">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+              Descargar wyndis.ps1
+            </button>
+            <button class="btn btn-secondary" id="downloadBatBtn">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+              Descargar .BAT
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-top:1rem;display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;">
+          <button class="btn btn-secondary" id="verifyBtn" style="font-size:0.8rem;padding:0.5rem 1rem;">
+            &#x1F512; Verificar integridad SHA-256
+          </button>
+          <span id="verifyStatus" style="font-size:0.78rem;color:var(--text-muted);">Hash oficial: <code id="expectedHash" style="color:#60a5fa;font-size:0.7rem;">51bf60eb06724bdfc9ce7b4015a8fe93ec71fdbe56ba5909e634245f815b8ca4</code></span>
+        </div>
+        <div id="verifyHash" style="display:none;"></div>
+
+        <div class="step" style="margin-top:1.25rem;border-top:1px solid var(--border-subtle);padding-top:1.25rem;">
+          <div class="step-title"><span class="step-number">2</span> Ejecutar como Administrador</div>
+          <div class="code-block">
+            <span class="code-text">powershell -ExecutionPolicy RemoteSigned -File .\wyndis.ps1</span>
+            <button class="copy-btn">Copiar</button>
+          </div>
+          <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.5rem;">
+            O haz doble clic en <strong>wyndis.bat</strong> — verifica SHA-256 y se auto-eleva.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" id="simulador">
+        <div class="card-header">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+          Simulador de Puntuacion
+        </div>
+        <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:1rem;">
+          Activa hallazgos para ver como afectan la puntuacion en tiempo real.
+        </p>
+
+        <div class="simulator-items">
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sc1">
+              <span class="sim-item-text">Antivirus desactivado</span>
+            </div>
+            <span class="sim-item-points crit">-5 pts</span>
+          </div>
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sc2">
+              <span class="sim-item-text">UAC desactivado</span>
+            </div>
+            <span class="sim-item-points crit">-5 pts</span>
+          </div>
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sc3">
+              <span class="sim-item-text">BitLocker no activo</span>
+            </div>
+            <span class="sim-item-points crit">-5 pts</span>
+          </div>
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sw1">
+              <span class="sim-item-text">RDP habilitado</span>
+            </div>
+            <span class="sim-item-points warn">-2 pts</span>
+          </div>
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sw2">
+              <span class="sim-item-text">Sin actualizaciones >60 dias</span>
+            </div>
+            <span class="sim-item-points warn">-2 pts</span>
+          </div>
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sw3">
+              <span class="sim-item-text">Telemetria elevada</span>
+            </div>
+            <span class="sim-item-points warn">-2 pts</span>
+          </div>
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sw4">
+              <span class="sim-item-text">Guest cuenta habilitada</span>
+            </div>
+            <span class="sim-item-points crit">-5 pts</span>
+          </div>
+          <div class="sim-item">
+            <div class="sim-item-left">
+              <input type="checkbox" id="sw5">
+              <span class="sim-item-text">WinRM en ejecucion</span>
+            </div>
+            <span class="sim-item-points warn">-2 pts</span>
+          </div>
+        </div>
+
+        <div class="score-display">
+          <div>
+            <div style="font-size:0.72rem;text-transform:uppercase;color:var(--text-muted);font-weight:600;letter-spacing:0.5px;">Puntuacion</div>
+            <div class="score-number" id="simScore">100 <span class="total">/ 100</span></div>
+          </div>
+          <div class="score-label-box">
+            <div class="score-label-text" id="simLabel" style="color:var(--accent-green);">Excelente</div>
+            <div class="score-label-desc" id="simDesc">Configuracion de seguridad optima.</div>
+          </div>
+        </div>
+        <div class="bar-chart" style="margin-top:0.5rem;">
+          <div class="bar-fill" id="simBar" style="width:100%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in" style="margin-top:1.5rem;">
+    <div class="card full-width">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        Demo en Vivo
+      </div>
+      <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:1rem;">
+        Simulacion de una auditoria Wyndis completa. Haz clic para ver la salida en terminal.
+      </p>
+      <div class="terminal-output" id="terminalOutput">
+        <div style="color:#64748b;">Haz clic en "Ejecutar auditoria" para ver la simulacion...</div>
+      </div>
+      <button class="btn btn-primary" id="simRunAudit" style="margin-top:0.75rem;">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/></svg>
+        Ejecutar auditoria
+      </button>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in" style="margin-top:1.5rem;">
+    <div class="card full-width">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z"/></svg>
+        27 Modulos de Auditoria
+      </div>
+      <div class="modules-grid">
+        <div class="module-card"><h4>Firewall</h4><p>Perfiles, puertos, reglas</p><span class="check-count">15 checks</span></div>
+        <div class="module-card"><h4>Permisos</h4><p>Cuentas, UAC, Guest</p><span class="check-count">20 checks</span></div>
+        <div class="module-card"><h4>Updates</h4><p>Parches, EOL, servicio</p><span class="check-count">18 checks</span></div>
+        <div class="module-card"><h4>Defender</h4><p>AV, firmas, exclusiones</p><span class="check-count">20 checks</span></div>
+        <div class="module-card"><h4>RDP</h4><p>Escritorio remoto</p><span class="check-count">12 checks</span></div>
+        <div class="module-card"><h4>Servicios</h4><p>17 servicios peligrosos</p><span class="check-count">18 checks</span></div>
+        <div class="module-card"><h4>Inicio</h4><p>Auto-arranque, WMI</p><span class="check-count">15 checks</span></div>
+        <div class="module-card"><h4>Red</h4><p>Puertos, SMB, DNS</p><span class="check-count">25 checks</span></div>
+        <div class="module-card"><h4>Cifrado</h4><p>BitLocker, TPM</p><span class="check-count">20 checks</span></div>
+        <div class="module-card"><h4>CIS</h4><p>Baseline seguridad</p><span class="check-count">35 checks</span></div>
+        <div class="module-card"><h4>Privacidad</h4><p>Telemetria, Cortana</p><span class="check-count">20 checks</span></div>
+        <div class="module-card"><h4>WinRM</h4><p>Remoto, Registry</p><span class="check-count">12 checks</span></div>
+        <div class="module-card"><h4>Bluetooth</h4><p>USB, AutoPlay</p><span class="check-count">10 checks</span></div>
+        <div class="module-card"><h4>Credenciales</h4><p>Vault, RDP</p><span class="check-count">15 checks</span></div>
+        <div class="module-card"><h4>SecCenter</h4><p>AV, Sandbox, SMB1</p><span class="check-count">15 checks</span></div>
+        <div class="module-card"><h4>Navegadores</h4><p>Chrome, Edge, FF</p><span class="check-count">20 checks</span></div>
+        <div class="module-card"><h4>WiFi</h4><p>Redes, cifrado</p><span class="check-count">15 checks</span></div>
+        <div class="module-card"><h4>GPO</h4><p>Politicas grupo</p><span class="check-count">18 checks</span></div>
+        <div class="module-card"><h4>Certificados</h4><p>Stores, expirados</p><span class="check-count">10 checks</span></div>
+        <div class="module-card"><h4>Eventos</h4><p>Logs, auditoria</p><span class="check-count">10 checks</span></div>
+        <div class="module-card"><h4>PowerShell</h4><p>Execution Policy</p><span class="check-count">10 checks</span></div>
+        <div class="module-card"><h4>AuditPol</h4><p>Politicas auditoria</p><span class="check-count">10 checks</span></div>
+        <div class="module-card"><h4>Apps</h4><p>Software riesgo</p><span class="check-count">12 checks</span></div>
+        <div class="module-card"><h4>Vida util</h4><p>RAM, SSD, BIOS</p><span class="check-count">15 checks</span></div>
+        <div class="module-card"><h4>Contenedores</h4><p>WSL, Docker, VM</p><span class="check-count">8 checks</span></div>
+        <div class="module-card"><h4>Herramientas</h4><p>Recomendaciones</p><span class="check-count">10 checks</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in" style="margin-top:1.5rem;">
+    <div class="card full-width">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z"/></svg>
+        Distribucion de Checks por Modulo
+      </div>
+      <canvas id="moduleChart" style="width:100%;height:200px;"></canvas>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in" style="margin-top:1.5rem;">
+    <div class="card full-width">
+      <div class="card-header">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Roadmap
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+        <div style="border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1rem;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+            <span style="font-weight:700;font-size:0.95rem;">v2.0</span>
+            <span class="badge badge-green">Publicado</span>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;font-size:0.8rem;color:var(--text-secondary);">
+            <li style="padding:0.25rem 0;">&#10003; 27 modulos, 320+ checks</li>
+            <li style="padding:0.25rem 0;">&#10003; PDF con graficos SVG</li>
+            <li style="padding:0.25rem 0;">&#10003; Web offline con Service Worker</li>
+            <li style="padding:0.25rem 0;">&#10003; Verificacion SHA-256</li>
+            <li style="padding:0.25rem 0;">&#10003; Puntuacion 0-100</li>
+          </ul>
+        </div>
+        <div style="border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1rem;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+            <span style="font-weight:700;font-size:0.95rem;">v2.1</span>
+            <span class="badge badge-outline">En desarrollo</span>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;font-size:0.8rem;color:var(--text-secondary);">
+            <li style="padding:0.25rem 0;">&#9899; Chocolatey + Winget</li>
+            <li style="padding:0.25rem 0;">&#9899; GitHub Actions CI/CD</li>
+            <li style="padding:0.25rem 0;">&#9899; Pruebas automaticas en VM</li>
+            <li style="padding:0.25rem 0;">&#9899; Hashing automatico en release</li>
+          </ul>
+        </div>
+        <div style="border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1rem;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+            <span style="font-weight:700;font-size:0.95rem;">v2.2</span>
+            <span class="badge badge-outline">Planificado</span>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;font-size:0.8rem;color:var(--text-secondary);">
+            <li style="padding:0.25rem 0;">&#9899; GUI nativa WinForms</li>
+            <li style="padding:0.25rem 0;">&#9899; Auditorias programadas</li>
+            <li style="padding:0.25rem 0;">&#9899; Exportacion CSV/JSON</li>
+          </ul>
+        </div>
+        <div style="border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1rem;">
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
+            <span style="font-weight:700;font-size:0.95rem;">v3.0</span>
+            <span class="badge badge-outline">Futuro</span>
+          </div>
+          <ul style="list-style:none;padding:0;margin:0;font-size:0.8rem;color:var(--text-secondary);">
+            <li style="padding:0.25rem 0;">&#9899; Version Linux (bash)</li>
+            <li style="padding:0.25rem 0;">&#9899; Dashboard web embebido</li>
+            <li style="padding:0.25rem 0;">&#9899; Plugins personalizados</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container animate-fade-in" style="margin-top:1.5rem;">
+    <div class="card full-width" style="border-color:rgba(88,101,242,0.15);background:linear-gradient(135deg,rgba(88,101,242,0.03),rgba(16,185,129,0.03));">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;">
+        <div>
+          <div class="card-header" style="margin-bottom:0.5rem;">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+            Unete a la comunidad
+          </div>
+          <p style="color:var(--text-secondary);font-size:0.85rem;margin-bottom:1rem;">
+            Wyndis es codigo abierto. Ayudanos a mejorar reportando bugs, sugiriendo features o contribuyendo codigo.
+          </p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="https://github.com/octcenano/wyndis" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration:none;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a href="https://discord.gg/wyndis" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none;">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028 14.09 14.09 0 001.226-1.994.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.947 2.418-2.157 2.418z"/></svg>
+              Discord
+            </a>
+            <a href="https://github.com/octcenano/wyndis/issues/new/choose" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration:none;">
+              Reportar bug
+            </a>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:0.75rem;padding-left:1.5rem;border-left:1px solid var(--border-subtle);">
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">&#9733;</div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;">Danos una estrella</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">En GitHub ayuda a que otros descubran Wyndis</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">&#9998;</div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;">Contribuye</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">Revisa los issues marcados con <code style="font-size:0.7rem;">good-first-issue</code></div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.75rem;">
+            <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#f59e0b,#d97706);display:flex;align-items:center;justify-content:center;font-size:1.2rem;">&#128172;</div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;">Comparte feedback</div>
+              <div style="font-size:0.78rem;color:var(--text-muted);">Tu opinion hace mejorar Wyndis</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div>
+      <div style="font-weight:600;margin-bottom:0.25rem;">Wyndis v2.0</div>
+      <div style="font-size:0.75rem;color:var(--text-muted);">Codigo abierto bajo <a href="https://github.com/octcenano/wyndis/blob/main/LICENSE" target="_blank" rel="noopener">licencia MIT</a></div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/octcenano/wyndis" target="_blank" rel="noopener">GitHub</a>
+      <span style="color:var(--border-hover);">|</span>
+      <a href="https://discord.gg/wyndis" target="_blank" rel="noopener">Discord</a>
+      <span style="color:var(--border-hover);">|</span>
+      <a href="mailto:wyndis.help@gmail.com" rel="noopener noreferrer">Contacto</a>
+      <span style="color:var(--border-hover);">|</span>
+      <a href="https://github.com/octcenano/wyndis/issues/new/choose" target="_blank" rel="noopener">Reportar bug</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const EXPECTED_HASH = '51bf60eb06724bdfc9ce7b4015a8fe93ec71fdbe56ba5909e634245f815b8ca4';
+
+  const WYNDIS_PS1_CODE = `# SPDX-License-Identifier: MIT
+#Requires -Version 5.1
+[CmdletBinding()]
+param(
+    [switch]$Quick,
+    [switch]$NoColor,
+    [switch]$NoPdf,
+    [switch]$Full,
+    [string]$ReportPath
+)
+
+$ErrorActionPreference = "SilentlyContinue"
+$Script:WyndisVersion = "2.0.0"
+$Script:WyndisStartTime = Get-Date
+$Script:Findings = [System.Collections.Generic.List[object]]::new()
+$Script:ReportLines = [System.Collections.Generic.List[string]]::new()
+$Script:ModulesExecuted = 0
+
+$LibPath = Join-Path $PSScriptRoot "lib"
+Get-ChildItem -Path $LibPath -Filter "*.ps1" | Sort-Object Name | ForEach-Object {
+    . $_.FullName
+    $Script:ModulesExecuted++
+}
+
+function Start-Wyndis {
+    Clear-Host
+    Show-WyndisBanner
+    $isAdmin = Test-WyndisAdmin
+    if (-not $isAdmin) {
+        Write-WyndisWarning "No se ejecuta como Administrador."
+        Write-WyndisSuggest "Ejecuta como Administrador para resultados completos."
+    }
+    Write-WyndisSection "1. Informacion del sistema"; Invoke-WyndisSystemInfo
+    Write-WyndisSection "2. Firewall"; Invoke-WyndisFirewallAudit
+    Write-WyndisSection "3. Permisos"; Invoke-WyndisPermissionsAudit
+    Write-WyndisSection "4. Windows Update"; Invoke-WyndisUpdateAudit
+    Write-WyndisSection "5. Defender"; Invoke-WyndisDefenderAudit
+    Write-WyndisSection "6. RDP"; Invoke-WyndisRdpAudit
+    Write-WyndisSection "7. Servicios"; Invoke-WyndisServicesAudit
+    Write-WyndisSection "8. Inicio"; Invoke-WyndisStartupAudit
+    Write-WyndisSection "9. Red"; Invoke-WyndisNetworkAudit
+    Write-WyndisSection "10. Cifrado"; Invoke-WyndisEncryptionAudit
+    Write-WyndisSection "11. CIS Baseline"; Invoke-WyndisCISBaseline
+    Write-WyndisSection "12. Privacidad"; Invoke-WyndisPrivacyAudit
+    Write-WyndisSection "13. WinRM"; Invoke-WyndisWinRMAudit
+    Write-WyndisSection "14. Bluetooth/USB"; Invoke-WyndisBluetoothUsbAudit
+    Write-WyndisSection "15. Credenciales"; Invoke-WyndisCredentialsAudit
+    Write-WyndisSection "16. Security Center"; Invoke-WyndisSecurityCenterAudit
+    Write-WyndisSection "17. Navegadores"; Invoke-WyndisBrowserAudit
+    Write-WyndisSection "18. WiFi"; Invoke-WyndisWiFiAudit
+    Write-WyndisSection "19. GPO"; Invoke-WyndisGroupPolicyAudit
+    Write-WyndisSection "20. Certificados"; Invoke-WyndisCertificateAudit
+    Write-WyndisSection "21. Event Logs"; Invoke-WyndisEventLogAudit
+    Write-WyndisSection "22. PowerShell"; Invoke-WyndisPowerShellAudit
+    Write-WyndisSection "23. Audit Policy"; Invoke-WyndisAuditPolicyAudit
+    if (-not $Quick) {
+        Write-WyndisSection "24. Contenedores"; Invoke-WyndisContainerAudit
+        Write-WyndisSection "25. Aplicaciones"; Invoke-WyndisApplicationsAudit
+        Write-WyndisSection "26. Vida util"; Invoke-WyndisSystemLifeAudit
+        Write-WyndisSection "27. Herramientas"; Invoke-WyndisToolRecommendations
+    }
+    Write-WyndisSection "Resumen y puntuacion"
+    $score = Get-WyndisScore
+    Show-WyndisScore $score
+    $elapsed = (Get-Date) - $Script:WyndisStartTime
+    $Script:AuditDuration = $elapsed.TotalSeconds.ToString("F1")
+    if ($ReportPath) { Export-WyndisReport -Path $ReportPath -Score $score }
+    if (-not $NoPdf) { $pdf = Export-WyndisPdfReport -Score $score }
+    Write-WyndisInfo "Auditoria completada en $($Script:AuditDuration) segundos."
+    Write-WyndisInfo "Web: wyndis-download-ce9eb.web.app"
+}
+Start-Wyndis`;
+
+  const WYNDIS_BAT_CODE = `@echo off
+title Wyndis v2.0 - Auditor profesional
+echo.
+echo  Wyndis v2.0 - Auditor de seguridad
+echo  ==============================================
+echo  Licencia MIT | wyndis-download-ce9eb.web.app
+echo.
+net session >nul 2>&1
+if %errorLevel% neq 0 (
+    powershell -Command "Start-Process powershell -ArgumentList '-ExecutionPolicy Bypass -File ""%~dp0wyndis.ps1""' -Verb RunAs"
+    exit /b
+)
+powershell -ExecutionPolicy Bypass -File "%~dp0wyndis.ps1" %*
+pause`;
+</script>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wyndis-download-ce9eb.web.app/sitemap.xml

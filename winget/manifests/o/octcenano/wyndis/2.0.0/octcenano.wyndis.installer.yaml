@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/microsoft/winget-cli/master/schemas/JSON/manifests/v1.6.0/manifest.installer.1.6.0.json
+PackageIdentifier: octcenano.wyndis
+PackageVersion: 2.0.0
+Installers:
+  - Architecture: x64
+    InstallerType: zip
+    InstallerUrl: https://wyndis-download-ce9eb.web.app/wyndis.zip
+    InstallerSha256: 9BDE7B0BF5B512E312FD786928D8A8AA67098615193A6CBCFDC531CE8F79488A
+    NestedInstallerType: portable
+    NestedInstallerFiles:
+      - RelativeFilePath: wyndis.ps1
+      - RelativeFilePath: wyndis.bat
+    InstallerAbortsTerminal: false
+    ReleaseDate: 2026-06-22
+ManifestType: installer
+ManifestVersion: 1.6.0

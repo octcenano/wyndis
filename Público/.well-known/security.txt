@@ -1,0 +1,12 @@
+# Wyndis Security Policy
+# ======================
+
+Contact: mailto:wyndis.help@gmail.com
+Policy: https://github.com/wyndis/wyndis/SECURITY.md
+Preferred-Languages: es, en
+Canonical: https://wyndis-download-ce9eb.web.app/.well-known/security.txt
+Expires: 2027-06-22T00:00:00.000Z
+
+# This document follows the security.txt standard (RFC 9116).
+# To report a security vulnerability, email wyndis.help@gmail.com
+# Expect acknowledgment within 48 hours.

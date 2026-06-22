@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Seguridad
+    url: https://wyndis-download-ce9eb.web.app/.well-known/security.txt
+    about: Reportar vulnerabilidades de seguridad
+  - name: Discord
+    url: https://discord.gg/wyndis
+    about: Comunidad de Wyndis

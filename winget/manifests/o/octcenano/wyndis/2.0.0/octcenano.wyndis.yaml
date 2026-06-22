@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/microsoft/winget-cli/master/schemas/JSON/manifests/v1.6.0/manifest.1.6.0.json
+PackageIdentifier: octcenano.wyndis
+PackageVersion: 2.0.0
+PackageLocale: en-US
+Publisher: octcenano
+PackageName: Wyndis
+License: MIT
+ShortDescription: Professional Windows security auditor. 300+ checks, PDF report with charts, open source MIT.
+Tags:
+  - security
+  - windows
+  - audit
+  - defender
+  - firewall
+ManifestType: merged
+ManifestVersion: 1.6.0

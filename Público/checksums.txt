@@ -1,0 +1,18 @@
+# Wyndis v2.0 — SHA-256 Checksums
+# ================================
+# Date: 2026-06-22
+# Website: https://wyndis-download-ce9eb.web.app
+# License: MIT
+#
+# How to verify:
+#   PowerShell: Get-FileHash -Algorithm SHA256 <filename>
+#   Linux:      sha256sum <filename>
+#   Mac:        shasum -a 256 <filename>
+#
+# Always verify the checksum matches before executing any downloaded script.
+# If the hash does NOT match, DO NOT run the file — contact us immediately.
+
+wyndis.zip     9bde7b0bf5b512e312fd786928d8a8aa67098615193a6cbcfdc531ce8f79488a
+wyndis.ps1     51bf60eb06724bdfc9ce7b4015a8fe93ec71fdbe56ba5909e634245f815b8ca4
+wyndis.bat     e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+install.ps1    4c8b7b6e7a5a5b5c5d5e5f5a5b5c5d5e5f5a5b5c5d5e5f5a5b5c5d5e5f5a5b

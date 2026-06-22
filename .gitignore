@@ -1,0 +1,25 @@
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs + reports
+*.log
+*.pdf
+firebase-debug.log
+.firebase/
+wyndis/Informes/
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Wyndis runtime
+wyndis/lib/
+wyndis/Informes/
+
+# Temp
+tmp/
+temp/

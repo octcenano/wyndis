@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/microsoft/winget-cli/master/schemas/JSON/manifests/v1.6.0/manifest.locale.1.6.0.json
+PackageIdentifier: octcenano.wyndis
+PackageVersion: 2.0.0
+PackageLocale: en-US
+Publisher: octcenano
+PublisherUrl: https://wyndis-download-ce9eb.web.app
+PublisherSupportUrl: https://github.com/octcenano/wyndis/issues
+Author: octcenano
+PackageName: Wyndis
+PackageUrl: https://wyndis-download-ce9eb.web.app
+License: MIT
+LicenseUrl: https://github.com/octcenano/wyndis/blob/main/LICENSE
+Copyright: Copyright (c) 2026 octcenano
+ShortDescription: Professional Windows security auditor. 300+ checks, PDF report with charts, open source MIT.
+Description: Wyndis analyzes 27 security categories on Windows and generates a professional PDF report with charts and personalized recommendations. 100% free and open source.
+Moniker: wyndis
+Tags:
+  - security
+  - windows
+  - audit
+  - defender
+  - firewall
+  - lynis
+ReleaseNotes: |
+  v2.0.0 — Professional release
+  - 27 audit modules, 320+ security checks
+  - PDF report with SVG charts
+  - Professional web presence with offline support
+  - SHA-256 integrity verification
+  - Scoring system 0-100
+  - Interactive scoring simulator
+  - Full MIT license
+ReleaseNotesUrl: https://github.com/octcenano/wyndis/releases/tag/v2.0.0
+PurchaseUrl: null
+InstallationNotes: Run wyndis.bat as Administrator to start the audit.
+Documentations:
+  - DocumentLabel: Web
+    DocumentUrl: https://wyndis-download-ce9eb.web.app
+  - DocumentLabel: README
+    DocumentUrl: https://github.com/octcenano/wyndis/blob/main/README.md
+ManifestType: defaultLocale
+ManifestVersion: 1.6.0

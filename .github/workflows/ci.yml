@@ -1,0 +1,70 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'wyndis/**'
+      - 'Público/**'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Lint PowerShell
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install PSScriptAnalyzer
+        run: Install-Module -Name PSScriptAnalyzer -Force
+      - name: Run analysis
+        run: |
+          $results = Invoke-ScriptAnalyzer -Path wyndis/ -Recurse -ExcludeRule PSAvoidUsingCmdletAliases
+          if ($results) { $results | Format-Table; exit 1 }
+
+  test:
+    name: Test modules load
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test dot-source all modules
+        run: |
+          Get-ChildItem wyndis/lib/*.ps1 | ForEach-Object { . $_.FullName }
+          Write-Host "All modules loaded successfully" -ForegroundColor Green
+
+  checksums:
+    name: Update SHA-256 checksums
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compute checksums
+        run: |
+          echo "# SHA-256 checksums — Wyndis $(date -u +%Y-%m-%d)" > Público/checksums.txt
+          echo "" >> Público/checksums.txt
+          for f in wyndis/wyndis.ps1 Público/install.ps1 wyndis/wyndis.bat; do
+            hash=$(sha256sum "$f" | cut -d' ' -f1)
+            name=$(basename "$f")
+            printf "%-20s  %s\n" "$name" "$hash" >> Público/checksums.txt
+          done
+      - name: Commit checksums
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add Público/checksums.txt
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: update checksums [skip ci]"
+          git push
+
+  deploy:
+    name: Deploy to Firebase
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    needs: [lint, test]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: w9jds/firebase-action@v13
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
